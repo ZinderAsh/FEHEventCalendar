@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/widgetbgdark"
+    android:padding="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@drawable/widgettopdark">
+
+        <Button
+            android:id="@+id/button_prev"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@drawable/prev"
+            android:layout_margin="2dp"/>
+
+        <TextView
+            android:id="@+id/widget_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:text="Today"
+            android:textColor="#DADADA"
+            android:minLines="2"
+            android:maxLines="2"/>
+
+        <Button
+            android:id="@+id/button_next"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@drawable/next"
+            android:layout_margin="2dp"/>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ListView
+            android:id="@+id/list_events"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="4dp">
+        </ListView>
+
+        <Button
+            android:id="@+id/open_activity"
+            android:layout_width="36dp"
+            android:layout_height="40dp"
+            android:text="+"
+            android:textColor="#DADADA"
+            android:background="@drawable/button_dark"
+            android:layout_gravity="bottom|right"/>
+
+        <Button
+            android:id="@+id/refresh_widget"
+            android:layout_width="36dp"
+            android:layout_height="40dp"
+            android:text="↺"
+            android:textColor="#DADADA"
+            android:background="@drawable/button_dark"
+            android:textSize="18sp"
+            android:textAlignment="center"
+            android:paddingLeft="0dp"
+            android:paddingRight="0dp"
+            android:paddingTop="0dp"
+            android:layout_gravity="bottom|left"/>
+
+    </FrameLayout>
+
+</LinearLayout>
